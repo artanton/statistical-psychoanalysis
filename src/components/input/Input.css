@@ -1,0 +1,27 @@
+
+.form-container {
+    box-sizing: border-box;
+   gap: 20px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+}
+.date-input {
+    width: 75%;
+    outline: none;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: #333;
+    background: #fff;
+    border: 1px solid #3CBC8D;
+    box-shadow: 0 0 5px rgba(60, 188, 141, 0.5);
+    border-radius: 4px;
+}
+.date-input:focus {
+
+background-color: yellow;
+}
+
+.submit-button{
+  background-color: #3CBC8D;  
+}
