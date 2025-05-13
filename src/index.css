@@ -66,11 +66,11 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: red;
+
+  background-color: yellow;
 }
 button:focus,
 button:focus-visible {
-  
 }
 
 
