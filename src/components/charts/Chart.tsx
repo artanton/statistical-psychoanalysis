@@ -1,85 +1,110 @@
 import type { ChartProps } from "../../interface";
+import "./Chart.css";
 
 export default function Chart(matrix: ChartProps) {
-    console.log(matrix);
-    return(
-        <div>
-            {matrix.matrix && (
-                <div className="chart-container">
-                    <h2>Матриця</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Дата</th>
-                                <th>Перша додатня цифра</th>
-                                <th>Друга додатня цифра</th>
-                                <th>Третя додатня цифра</th>
-                                <th>Четверта додатня цифра</th>
-                                <th>Число долі</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{matrix.matrix.date}</td>
-                                <td>{matrix.matrix.firstAddNumber}</td>
-                                <td>{matrix.matrix.secondAddNumber}</td>
-                                <td>{matrix.matrix.thirdAddNumber}</td>
-                                <td>{matrix.matrix.fourthAddNumber}</td>
-                                <td>{matrix.matrix.fateNumber}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+  if (!matrix.matrix) {
+    return;
+  }
 
-                </div>
+  const {
+    date,
+    firstAddNumber,
+    secondAddNumber,
+    thirdAddNumber,
+    fourthAddNumber,
+    fateNumber,
+    temper,
+    character,
+    energy,
+    intrest,
+    health,
+    logic,
+    life,
+    work,
+    luck,
+    debt,
+    memory,
+    family,
+    purpose,
+    habits,
+  } = matrix.matrix;
 
-            )}
-            {matrix.matrix && (
-                <div className="chart-container">
-                    <h2>Характеристика</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Темперамент</th>
-                                <th>Характер</th>
-                                <th>Енергія</th>
-                                <th>Інтерес</th>
-                                <th>Здоров'я</th>
-                                <th>Логіка</th>
-                                <th>Труд</th>
-                                <th>Вдача</th>
-                                <th>Борг</th>
-                                <th>Пам'ять</th>
-                                <th>Сім'я</th>
-                                <th>Ціль</th>
-                                <th>Звички</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{matrix.matrix.temper?matrix.matrix.temper:"Пусто"}</td>
-                                <td>{matrix.matrix.character?matrix.matrix.character:"Пусто"}</td>
-                                <td>{matrix.matrix.energy?matrix.matrix.energy:"Пусто"}</td>
-                                <td>{matrix.matrix.intrest?matrix.matrix.intrest:"Пусто"}</td>
-                                <td>{matrix.matrix.health?matrix.matrix.health:"Пусто"}</td>
-                                <td>{matrix.matrix.logic?matrix.matrix.logic:"Пусто"}</td>
-                                <td>{matrix.matrix.work?matrix.matrix.work:"Пусто"}</td>
-                                <td>{matrix.matrix.luck?matrix.matrix.luck:"Пусто"}</td>
-                                <td>{matrix.matrix.debt?matrix.matrix.debt:"Пусто"}</td>
-                                <td>{matrix.matrix.memory?matrix.matrix.memory:"Пусто"}</td>
-                                <td>{matrix.matrix.family?matrix.matrix.family:"Пусто"}</td>
-                                <td>{matrix.matrix.purpose?matrix.matrix.purpose:"Пусто"}</td>
-                                <td>{matrix.matrix.habits?matrix.matrix.habits:"Пусто"}</td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            )}
-            
+  console.log(matrix);
+  return (
+    <div>
+      {matrix && (
+        <div className="data-container">
+          <div className="data-item">Дата народження:</div>
+          <div className="data-item">{date}</div>
+          <div className="data-item">Додатні цифри:</div>
+          <div className="data-item">
+            {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
+            {fourthAddNumber}
+          </div>
+          <div className="data-item">Число долі</div>
+          <div className="data-item">{fateNumber}</div>
         </div>
-    )
+      )}
+      {matrix && (
+        <div className="chart-container">
+          <div className="chart-item temper">
+            <p>Темперамент</p>
+            <p>{temper ? temper : "Пусто"}</p>
+          </div>
+          <div className="chart-item character">
+            <p>Характер</p>
+            <p>{character ? character : "Пусто"}</p>
+          </div>
+          <div className="chart-item energy">
+            <p>Енергія</p>
+            <p>{energy ? energy : "Пусто"}</p>
+          </div>
+          <div className="chart-item intrest">
+            <p>Інтерес</p>
+            <p>{intrest ? intrest : "Пусто"} </p>
+          </div>
+          <div className="chart-item health">
+            <p>Здоров'я</p>
+            <p>{health ? health : "Пусто"}</p>
+          </div>
+          <div className="chart-item logic">
+            <p>Логіка</p>
+            <p>{logic ? logic : "Пусто"}</p>
+          </div>
+          <div className="chart-item work">
+            <p>Труд</p>
+            <p>{work ? work : "Пусто"}</p>
+          </div>
+          <div className="chart-item luck">
+            <p>Вдача</p>
+            <p>{luck ? luck : "Пусто"}</p>
+          </div>
+          <div className="chart-item debt">
+            <p>Борг</p>
+            <p>{debt ? debt : "Пусто"}</p>
+          </div>
+          <div className="chart-item memory">
+            <p>Пам'ять</p>
+            <p>{memory ? memory : "Пусто"}</p>
+          </div>
+          <div className="chart-item family">
+            <p>Сім'я</p>
+            <p>{family ? family : "Пусто"}</p>
+          </div>
+          <div className="chart-item purpose">
+            <p>Ціль</p>
+            <p>{purpose ? purpose : "Пусто"}</p>
+          </div>
+          <div className="chart-item life">
+            <p>Побут</p>
+            <p>{life ? life : "Пусто"}</p>
+          </div>
+          <div className="chart-item habits">
+            <p>Звички</p>
+            <p>{habits ? habits : "Пусто"}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

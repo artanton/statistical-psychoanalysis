@@ -18,6 +18,11 @@ export default function Input({ onResult }: InputProps) {
     }
     const date = value.format("DD-MM-YYYY");
     const matrix = calculate(date);
+   
+    if (!matrix) {
+      alert("Помилка при розрахунку матриці");
+      return;
+    }
     onResult(matrix);
   };
 
@@ -25,7 +30,7 @@ export default function Input({ onResult }: InputProps) {
     <div className="input-container">
       <form className="form-container" onSubmit={onSubmit}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DatePicker
+          <DatePicker className="date-input"
             label="Введіть дату народження"
             format="DD/MM/YYYY"
             value={value}

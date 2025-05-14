@@ -1,0 +1,95 @@
+.data-container{
+    max-width: 350px;
+    margin: 40px 0 40px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 30px);
+}
+
+.data-item {   
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  .chart-container{
+    margin:  40px 0 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    grid-template-areas:
+    ". . .  t"
+    "c h k p"
+    "e l d f"
+    "i w m b"
+    ". z . .";
+  } 
+
+  .chart-item{
+      border: 1px solid #3CBC8D;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+  }
+
+.temper {
+    grid-area: t; 
+}
+
+.character {
+    grid-area: c; 
+}
+
+.energy {
+    grid-area: e; 
+}
+
+.intrest {
+    grid-area: i; 
+}
+
+.health {
+    grid-area: h; 
+}
+
+.logic {
+    grid-area: l; 
+}
+
+.work {
+    grid-area: w; 
+}   
+
+.luck {
+    grid-area: k; 
+}   
+
+.debt {
+    grid-area: d; 
+}
+
+.memory {
+    grid-area: m; 
+}
+
+.family {
+    grid-area: f; 
+}
+.purpose {
+    grid-area: p; 
+}
+
+.habits {
+    grid-area: b; 
+}
+
+.life {
+    grid-area: z; 
+}
+/* .chart-item:hover {
+    background-color: #3CBC8D;
+} */
+
+

@@ -6,9 +6,6 @@ import Chart from './components/charts/chart.tsx';
 
 function App() {
   const [matrix, setMatrix] = useState<Imatrix | null>(null);
-
-
-
   return (
     <>
     <h1 className = "app-title">Розрахунок матриці</h1>

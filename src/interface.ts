@@ -25,5 +25,5 @@ export interface Imatrix  {
   }
 
     export interface ChartProps {
-        matrix: Imatrix | null;
+        matrix: Imatrix |null;
     };
