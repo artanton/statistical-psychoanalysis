@@ -17,6 +17,7 @@ export interface Imatrix  {
     life: string;
     temper: string;
     purpose: string;
+    hiddenPurpose: sring;
     family: string;
     habits: string;
   };

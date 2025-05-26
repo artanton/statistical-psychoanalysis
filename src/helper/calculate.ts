@@ -4,6 +4,7 @@ import {
   calcfourthAddNumber,
   calcSecondAddNumber,
   calcThirdAddNumber,
+  calculateHiddenPurpose,
 } from "./calcAddNum";
 
 
@@ -37,6 +38,8 @@ export const calculate = (date: string): Imatrix => {
     const debt= arrToSickNumbers.filter(num=> num === "8").join("");
     const memory= arrToSickNumbers.filter(num=> num === "9").join("");
 
+    const hiddenPurpose =calculateHiddenPurpose(character,  health, luck, work);
+
   const matrix = {
     date: date,
     firstAddNumber: firstAddNumber.toString(),
@@ -56,6 +59,7 @@ export const calculate = (date: string): Imatrix => {
     life: health.concat(logic, work).split('').length.toString(),
     temper: intrest.concat(logic, luck).split('').length.toString(),
     purpose: character.concat(health, luck).split('').length.toString(),
+    hiddenPurpose: hiddenPurpose,
     family: energy.concat(logic, debt).split('').length.toString(),
     habits: intrest.concat(work,memory).split('').length.toString(),
   };

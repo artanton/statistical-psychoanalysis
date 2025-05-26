@@ -5,6 +5,7 @@ export default function Chart(matrix: ChartProps) {
   if (!matrix.matrix) {
     return;
   }
+  console.log(matrix.matrix);
 
   const {
     date,
@@ -26,27 +27,41 @@ export default function Chart(matrix: ChartProps) {
     memory,
     family,
     purpose,
+    hiddenPurpose,
     habits,
   } = matrix.matrix;
 
-  console.log(matrix);
+ 
   return (
     <div>
+      {/* {matrix && (
+        // <div className="chart-item main-data">
+        //   <div className="data-item">Дата народження:</div>
+        //   <div className="data-item">{date}</div>
+        //   <div className="data-item">Додатні цифри:</div>
+        //   <div className="data-item">
+        //     {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
+        //     {fourthAddNumber}
+        //   </div>
+        //   <div className="data-item">Число долі</div>
+        //   <div className="data-item">{fateNumber}</div>
+        // </div>
+      )} */}
       {matrix && (
-        <div className="data-container">
-          <div className="data-item">Дата народження:</div>
-          <div className="data-item">{date}</div>
-          <div className="data-item">Додатні цифри:</div>
+        <div className="chart-container">
+            <div className="chart-item main-data">
+            <div className="data-container">
+             <div className="data-item">Дата народження:</div>
+             <div className="data-item">{date}</div>
+             <div className="data-item">Додатні цифри:</div>
           <div className="data-item">
             {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
             {fourthAddNumber}
           </div>
-          <div className="data-item">Число долі</div>
+          <div className="data-item">Число долі:</div>
           <div className="data-item">{fateNumber}</div>
-        </div>
-      )}
-      {matrix && (
-        <div className="chart-container">
+          </div>
+            </div>
           <div className="chart-item temper">
             <p>Темперамент</p>
             <p>{temper ? temper : "Пусто"}</p>
@@ -93,7 +108,7 @@ export default function Chart(matrix: ChartProps) {
           </div>
           <div className="chart-item purpose">
             <p>Ціль</p>
-            <p>{purpose ? purpose : "Пусто"}</p>
+            <p>{purpose ? purpose : "Пусто"}({hiddenPurpose?hiddenPurpose:""})</p>
           </div>
           <div className="chart-item life">
             <p>Побут</p>

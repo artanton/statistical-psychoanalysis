@@ -1,6 +1,6 @@
 .data-container{
-    max-width: 350px;
-    margin: 40px 0 40px 0;
+    /* max-width: 350px;
+    margin: 40px 0 40px 0; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 30px);
@@ -8,7 +8,7 @@
 
 .data-item {   
     display: grid;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     font-weight: 500;
   }
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 100px);
     grid-template-areas:
-    ". . .  t"
+    "a a a t"
     "c h k p"
     "e l d f"
     "i w m b"
@@ -33,6 +33,10 @@
     justify-content:space-around;
     align-items: center;
   }
+
+  .main-data {
+    grid-area: a; 
+}
 
 .temper {
     grid-area: t; 
