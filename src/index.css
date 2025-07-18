@@ -13,6 +13,25 @@ button {
 
 a {
   text-decoration: none;
+  font-weight: 700;
+  color: #3cbc8d;
+  animation: glow 10s ease-in-out infinite;
+}
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  24%,
+  36% {
+    text-shadow: 0 0 0px #fff;
+  }
+
+  30% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #eec50d, 0 0 15px #eec50d,
+      0 0 20px #eec50d, 0 0 25px #eec50d;
+  }
 }
 
 image {
@@ -70,7 +89,4 @@ button {
 }
 button:hover {
   background-color: yellow;
-}
-button:focus,
-button:focus-visible {
 }
