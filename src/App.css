@@ -1,24 +1,41 @@
 #root {
+   max-width: 100%;
+margin: 0 auto;
+padding: 1rem;
+text-align: center;
+font-size: 16px;
+}
+
+@media only screen and (max-width: 374px) {
+  #root { 
+ 
+  padding: 1rem;
+  font-size: 8px;  
+}
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  #root {
+ 
+  padding: 1.5 rem;
+  font-size: 10px;
+  
+}}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  #root {
+ 
   max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 1.5 rem;
+  font-size: 14px;
   
 }
 
+}
 
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+
+
+
+
 
 

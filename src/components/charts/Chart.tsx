@@ -48,15 +48,15 @@ export default function Chart(matrix: ChartProps) {
       {matrix && (
         <div className="chart-container">
           <div className="chart-item added-numbers">
-            <p className="data-item">Додатні цифри:</p>
-            <p className="data-item">
+            <p>Додатні цифри:</p>
+            <p>
               {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
               {fourthAddNumber}
             </p>
           </div>
           <div className="chart-item number-fate">
-            <p className="data-item">Число долі</p>
-            <p className="data-item">{fateNumber}</p>
+            <p>Число долі</p>
+            <p>{fateNumber}</p>
           </div>
           <div className="chart-item temper">
             <p>Темперамент</p>

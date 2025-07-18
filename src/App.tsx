@@ -3,7 +3,7 @@ import './App.css';
 import Box from '@mui/material/Box';
 import Input from './components/input/Input.tsx';
 import type { Imatrix } from './interface.ts';
-import Chart from './components/charts/chart.tsx';
+import Chart from './components/charts/Chart.tsx';
 
 function App() {
   const [matrix, setMatrix] = useState<Imatrix | null>(null);
