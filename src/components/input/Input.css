@@ -9,6 +9,12 @@
     margin: 0 auto;
     /* align-items: center; */
 }
+.date-input {
+ 
+  border: 1px solid #0a6569;
+  border-radius: 5px;
+  font-size: 20px;
+}
 
 .date-input:focus {
 
@@ -16,5 +22,6 @@ background-color: #ffea82;
 }
 
 .submit-button{
+  color: #ffea82;
   background-color: #0a6569;  
 }

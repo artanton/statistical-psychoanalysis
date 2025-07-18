@@ -93,5 +93,11 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
+  
   background-color: #ffea82;
+  color: black;
+}
+
+input{
+  font-size: 22px;
 }
