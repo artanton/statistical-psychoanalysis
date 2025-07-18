@@ -48,74 +48,74 @@ export default function Chart(matrix: ChartProps) {
       {matrix && (
         <div className="chart-container">
           <div className="chart-item added-numbers">
-            <p>Додатні цифри:</p>
+            <p className="smallFont">Додатні цифри:</p>
             <p>
               {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
               {fourthAddNumber}
             </p>
           </div>
           <div className="chart-item number-fate">
-            <p>Число долі</p>
+            <p className="smallFont">Число долі</p>
             <p>{fateNumber}</p>
           </div>
           <div className="chart-item temper">
-            <p>Темперамент</p>
-            <p>{temper ? temper : "Пусто"}</p>
+            <p className="smallFont">Темперамент</p>
+            <p>{temper ? temper : "-"}</p>
           </div>
           <div className="chart-item character">
-            <p>Характер</p>
-            <p>{character ? character : "Пусто"}</p>
+            <p className="smallFont">Характер</p>
+            <p>{character ? character : "-"}</p>
           </div>
           <div className="chart-item energy">
-            <p>Енергія</p>
-            <p>{energy ? energy : "Пусто"}</p>
+            <p className="smallFont">Енергія</p>
+            <p>{energy ? energy : "-"}</p>
           </div>
           <div className="chart-item intrest">
-            <p>Інтерес</p>
-            <p>{intrest ? intrest : "Пусто"} </p>
+            <p className="smallFont">Інтерес</p>
+            <p>{intrest ? intrest : "-"} </p>
           </div>
           <div className="chart-item health">
-            <p>Здоров'я</p>
-            <p>{health ? health : "Пусто"}</p>
+            <p className="smallFont">Здоров'я</p>
+            <p>{health ? health : "-"}</p>
           </div>
           <div className="chart-item logic">
-            <p>Логіка</p>
-            <p>{logic ? logic : "Пусто"}</p>
+            <p className="smallFont">Логіка</p>
+            <p>{logic ? logic : "-"}</p>
           </div>
           <div className="chart-item work">
-            <p>Труд</p>
-            <p>{work ? work : "Пусто"}</p>
+            <p className="smallFont">Труд</p>
+            <p>{work ? work : "-"}</p>
           </div>
           <div className="chart-item luck">
-            <p>Вдача</p>
-            <p>{luck ? luck : "Пусто"}</p>
+            <p className="smallFont">Вдача</p>
+            <p>{luck ? luck : "-"}</p>
           </div>
           <div className="chart-item debt">
-            <p>Борг</p>
-            <p>{debt ? debt : "Пусто"}</p>
+            <p className="smallFont">Борг</p>
+            <p>{debt ? debt : "-"}</p>
           </div>
           <div className="chart-item memory">
-            <p>Пам'ять</p>
-            <p>{memory ? memory : "Пусто"}</p>
+            <p className="smallFont">Пам'ять</p>
+            <p>{memory ? memory : "-"}</p>
           </div>
           <div className="chart-item family">
-            <p>Сім'я</p>
-            <p>{family ? family : "Пусто"}</p>
+            <p className="smallFont">Сім'я</p>
+            <p>{family ? family : "-"}</p>
           </div>
           <div className="chart-item purpose">
-            <p>Ціль</p>
+            <p className="smallFont">Ціль</p>
             <p>
-              {purpose ? purpose : "Пусто"}({hiddenPurpose ? hiddenPurpose : ""}
+              {purpose ? purpose : "-"}({hiddenPurpose ? hiddenPurpose : ""}
               )
             </p>
           </div>
           <div className="chart-item life">
-            <p>Побут</p>
-            <p>{life ? life : "Пусто"}</p>
+            <p className="smallFont">Побут</p>
+            <p>{life ? life : "-"}</p>
           </div>
           <div className="chart-item habits">
-            <p>Звички</p>
-            <p>{habits ? habits : "Пусто"}</p>
+            <p className="smallFont">Звички</p>
+            <p>{habits ? habits : "-"}</p>
           </div>
         </div>
       )}

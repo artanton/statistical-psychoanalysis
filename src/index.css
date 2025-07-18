@@ -11,10 +11,15 @@ button {
   cursor: pointer;
 }
 
+P {
+  margin: 0.5em;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   font-weight: 700;
-  color: #3cbc8d;
+  color: #0a6569;
   animation: glow 10s ease-in-out infinite;
 }
 @keyframes glow {
@@ -23,14 +28,14 @@ a {
     text-shadow: 0 0 0px #fff;
   }
 
-  24%,
-  36% {
+  20%,
+  40% {
     text-shadow: 0 0 0px #fff;
   }
 
   30% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #eec50d, 0 0 15px #eec50d,
-      0 0 20px #eec50d, 0 0 25px #eec50d;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ffea82, 0 0 15px #ffea82,
+      0 0 20px #ffea82, 0 0 25px #ffea82;
   }
 }
 
@@ -81,12 +86,12 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 800;
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: yellow;
+  background-color: #ffea82;
 }

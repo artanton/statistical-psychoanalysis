@@ -1,8 +1,8 @@
 .data-item {
   display: grid;
-  justify-content: space-between;
-  align-items: space-between;
-  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .chart-container {
@@ -21,109 +21,109 @@
 .chart-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .added-numbers {
   grid-area: a;
-  border: 1px solid #3cbc8d;
+  border: 1px solid #0a6569;
 }
 
 .number-fate {
   grid-area: n;
-  border-top: 1px solid #3cbc8d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-top: 1px solid #0a6569;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .temper {
   grid-area: t;
-  border-top: 1px solid #3cbc8d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-top: 1px solid #0a6569;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .character {
   grid-area: c;
-  border-left: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
 
-  border-bottom: 1px solid #3cbc8d;
+  border-bottom: 1px solid #0a6569;
 }
 
 .energy {
   grid-area: e;
-  border-left: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
 
-  border-bottom: 1px solid #3cbc8d;
+  border-bottom: 1px solid #0a6569;
 }
 
 .intrest {
   grid-area: i;
-  border-left: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
 
-  border-bottom: 1px solid #3cbc8d;
+  border-bottom: 1px solid #0a6569;
 }
 
 .health {
   grid-area: h;
-  border-left: 1px solid #3cbc8d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .logic {
   grid-area: l;
-  border-left: 1px solid #3cbc8d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .work {
   grid-area: w;
-  border-left: 1px solid #3cbc8d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .luck {
   grid-area: k;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .debt {
   grid-area: d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .memory {
   grid-area: m;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .family {
   grid-area: f;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 .purpose {
   grid-area: p;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .habits {
   grid-area: b;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
 
 .life {
   grid-area: z;
-  border-left: 1px solid #3cbc8d;
-  border-right: 1px solid #3cbc8d;
-  border-bottom: 1px solid #3cbc8d;
+  border-left: 1px solid #0a6569;
+  border-right: 1px solid #0a6569;
+  border-bottom: 1px solid #0a6569;
 }
