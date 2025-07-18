@@ -59,7 +59,7 @@ export const calculate = (date: string): Imatrix => {
     life: health.concat(logic, work).split('').length.toString(),
     temper: intrest.concat(logic, luck).split('').length.toString(),
     purpose: character.concat(health, luck).split('').length.toString(),
-    hiddenPurpose: hiddenPurpose,
+    hiddenPurpose: hiddenPurpose.hiddenPurpose,
     family: energy.concat(logic, debt).split('').length.toString(),
     habits: intrest.concat(work,memory).split('').length.toString(),
   };

@@ -19,7 +19,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 100px);
     grid-template-areas:
-    "a a a t"
+    "a a n t"
     "c h k p"
     "e l d f"
     "i w m b"
@@ -34,9 +34,15 @@
     align-items: center;
   }
 
-  .main-data {
+  .added-numbers {
     grid-area: a; 
 }
+
+.numer-fate{
+    grid-area: n; 
+}
+
+
 
 .temper {
     grid-area: t; 

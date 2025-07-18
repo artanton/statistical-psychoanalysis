@@ -8,7 +8,6 @@ export default function Chart(matrix: ChartProps) {
   console.log(matrix.matrix);
 
   const {
-    date,
     firstAddNumber,
     secondAddNumber,
     thirdAddNumber,
@@ -31,7 +30,6 @@ export default function Chart(matrix: ChartProps) {
     habits,
   } = matrix.matrix;
 
- 
   return (
     <div>
       {/* {matrix && (
@@ -49,19 +47,17 @@ export default function Chart(matrix: ChartProps) {
       )} */}
       {matrix && (
         <div className="chart-container">
-            <div className="chart-item main-data">
-            <div className="data-container">
-             <div className="data-item">Дата народження:</div>
-             <div className="data-item">{date}</div>
-             <div className="data-item">Додатні цифри:</div>
-          <div className="data-item">
-            {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
-            {fourthAddNumber}
+          <div className="chart-item added-numbers">
+            <p className="data-item">Додатні цифри:</p>
+            <p className="data-item">
+              {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
+              {fourthAddNumber}
+            </p>
           </div>
-          <div className="data-item">Число долі:</div>
-          <div className="data-item">{fateNumber}</div>
+          <div className="chart-item number-fate">
+            <p className="data-item">Число долі</p>
+            <p className="data-item">{fateNumber}</p>
           </div>
-            </div>
           <div className="chart-item temper">
             <p>Темперамент</p>
             <p>{temper ? temper : "Пусто"}</p>
@@ -108,7 +104,10 @@ export default function Chart(matrix: ChartProps) {
           </div>
           <div className="chart-item purpose">
             <p>Ціль</p>
-            <p>{purpose ? purpose : "Пусто"}({hiddenPurpose?hiddenPurpose:""})</p>
+            <p>
+              {purpose ? purpose : "Пусто"}({hiddenPurpose ? hiddenPurpose : ""}
+              )
+            </p>
           </div>
           <div className="chart-item life">
             <p>Побут</p>

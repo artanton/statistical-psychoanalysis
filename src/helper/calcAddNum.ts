@@ -20,30 +20,28 @@ export const calcFirstAddNumber = (formattedDate:string)=>formattedDate
     .split("")
     .reduce((acc, curr) => acc + parseInt(curr), 0): thirdAddNumber;
 
-    export const calculateHiddenPurpose = (character,  health, luck, work)=>{
+    export const calculateHiddenPurpose = (character:string,  health:string, luck:string, work:string)=>{   
         console.log(typeof(character) );
-        console.log('character',character.split('').length );
+        console.log('character',character.split('').length%2 );
+        console.log('work',work.split('').length);
         let newCharacter;
          
-         switch (character){
-            case character==="":
-                newCharacter =0 
-                console.log(1);
-                break;
-            case character.length%2==1:
-                console.log(2);
-                newCharacter = 1
-                break;
-                default:
-                    console.log(3);
-                    newCharacter = 2; 
+          if (character.length === 0) {
+        newCharacter = "";
+    } else if (character.split('').length % 2 === 1) {
+        newCharacter = "1";
+    } else {
+        newCharacter = "11";
+    }
+        const newLuck =  luck + work;
+        console.log("newCharacter",newCharacter.split('').length);
+        console.log("newLuck", newLuck.split('').length);
+        console.log("health", health.split('').length);
 
-        }
-        const newLuck = work===""?luck.split('').length: luck.split('').length + work.split('').length;
-        console.log("newCharacter",newCharacter,character.split('').length%2);
-        console.log("newLuck",newLuck);
-
-        const hiddenPurpose = newCharacter + newLuck + health.split('').length;
-        return hiddenPurpose.toString();
+        const hiddenPurpose = newCharacter.split('').length + newLuck.split('').length + health.split('').length;
+        return {
+            hiddenPurpose: hiddenPurpose.toString(),
+            newLuck,
+        };
     }
   
