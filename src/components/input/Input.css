@@ -9,12 +9,7 @@
     margin: 0 auto;
     /* align-items: center; */
 }
-.date-input {
- 
-  border: 1px solid #0a6569;
-  border-radius: 5px;
-  font-size: 20px;
-}
+
 
 .date-input:focus {
 
@@ -23,5 +18,15 @@ background-color: #ffea82;
 
 .submit-button{
   color: #ffea82;
-  background-color: #0a6569;  
+  background-color: #0a6569; 
+  padding: 10px  20px;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: inherit;
+  transition: border-color 0.25s; 
+}
+.submit-button:hover {
+
+  background-color: #ffea82;
+  color: black;
 }

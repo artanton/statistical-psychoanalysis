@@ -39,7 +39,7 @@ export default function Input({ onResult }: InputProps) {
           />
         </LocalizationProvider>
         <button type="submit" className="submit-button">
-          Розрахувати
+          РОЗРАХУВАТИ
         </button>
       </form>
     </div>

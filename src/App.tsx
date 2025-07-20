@@ -10,12 +10,13 @@ function App() {
   return (
     <Box
       sx={{
-        padding: "30px",
+        padding: "16px",
         borderRadius: 4,
         backgroundColor: "white",
+        
       }}
     >
-      <h1 className="app-title">Розрахунок матриці</h1>
+      <h1 className="app-title">РОЗРАХУНОК МАТРИЦІ</h1>
       <Input onResult={setMatrix} />
       <Chart matrix={matrix} />
       <p>
