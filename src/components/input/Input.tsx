@@ -36,41 +36,27 @@ export default function Input({ onResult }: InputProps) {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
             slotProps={{
-              textField: {
-                className: "your-class-name", // 👈 заменяет className
-                fullWidth: true,
-                sx: {
-                  // Кастомный стиль
-                  "& label": {
-                    color: "#0a6569",
-                  },
-                  "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
+             
+               textField: {
+                  fullWidth: true,
+
+                  sx: {
+                    "& label": {
+                      color: "#0a6569",
+                    },
+                    " & .MuiOutlinedInput-root": {
+                      borderColor: "red", // input border color
+                    },
+
+                    // "& label.Mui-focused": {
+                    //   color: "#0a6569", // label focused
+                    // },
+                    "& .MuiOutlinedInput-root": {
+                      color: "#0a6569",
                       borderColor: "#0a6569",
                     },
                   },
                 },
-              },
-              //  textField: {
-              //     fullWidth: true,
-
-              //     sx: {
-              //       "& label": {
-              //         color: "#0a6569",
-              //       },
-              //       " & .MuiOutlinedInput-root": {
-              //         borderColor: "red", // input border color
-              //       },
-
-              //       "& label.Mui-focused": {
-              //         color: "#0a6569", // label focused
-              //       },
-              //       "& .MuiOutlinedInput-root": {
-              //         color: "#0a6569",
-              //         borderColor: "#0a6569",
-              //       },
-              //     },
-              //   },
               day: {
                 sx: {
                   "&.MuiPickersDay-root.Mui-selected": {
@@ -81,10 +67,7 @@ export default function Input({ onResult }: InputProps) {
               },
               yearButton: {
                 sx: {
-                  "&.Mui-selected": {
-                    backgroundColor: "#0a6569",
-                    color: "#ffea82",
-                  },
+                  color: "#0a6569",
                 },
               },
               actionBar: {
