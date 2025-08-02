@@ -30,9 +30,6 @@ export const calculateHiddenPurpose = (
   luck: string,
   work: string
 ) => {
-  console.log(typeof character);
-  console.log("character", character.split("").length % 2);
-  console.log("work", work.split("").length);
   let newCharacter;
 
   if (character.length === 0) {
@@ -43,9 +40,6 @@ export const calculateHiddenPurpose = (
     newCharacter = "11";
   }
   const newLuck = luck + work;
-  console.log("newCharacter", newCharacter.split("").length);
-  console.log("newLuck", newLuck.split("").length);
-  console.log("health", health.split("").length);
 
   const hiddenPurpose =
     newCharacter.split("").length +

@@ -5,7 +5,6 @@ export default function Chart(matrix: ChartProps) {
   if (!matrix.matrix) {
     return;
   }
-  console.log(matrix.matrix);
 
   const {
     firstAddNumber,
@@ -32,19 +31,7 @@ export default function Chart(matrix: ChartProps) {
 
   return (
     <div>
-      {/* {matrix && (
-        // <div className="chart-item main-data">
-        //   <div className="data-item">Дата народження:</div>
-        //   <div className="data-item">{date}</div>
-        //   <div className="data-item">Додатні цифри:</div>
-        //   <div className="data-item">
-        //     {firstAddNumber}.{secondAddNumber}.{thirdAddNumber}.
-        //     {fourthAddNumber}
-        //   </div>
-        //   <div className="data-item">Число долі</div>
-        //   <div className="data-item">{fateNumber}</div>
-        // </div>
-      )} */}
+
       {matrix && (
         <div className="chart-container">
           <div className="chart-item added-numbers">
@@ -60,7 +47,7 @@ export default function Chart(matrix: ChartProps) {
           </div>
           <div className="chart-item temper">
             <p className="smallFont">Темперамент</p>
-            <p>{temper ? temper : "-"}</p>
+            <p>{temper || temper === "0" ? temper : "-"}</p>
           </div>
           <div className="chart-item character">
             <p className="smallFont">Характер</p>
@@ -100,22 +87,21 @@ export default function Chart(matrix: ChartProps) {
           </div>
           <div className="chart-item family">
             <p className="smallFont">Сім'я</p>
-            <p>{family ? family : "-"}</p>
+            <p>{family || family === "0" ? family : "-"}</p>
           </div>
           <div className="chart-item purpose">
             <p className="smallFont">Ціль</p>
             <p>
-              {purpose ? purpose : "-"}({hiddenPurpose ? hiddenPurpose : ""}
-              )
+              {purpose || purpose === "0" ? purpose : "-"}({hiddenPurpose ? hiddenPurpose : ""})
             </p>
           </div>
           <div className="chart-item life">
             <p className="smallFont">Побут</p>
-            <p>{life ? life : "-"}</p>
+            <p>{life && life !== "0" ? life : "-"}</p>
           </div>
           <div className="chart-item habits">
             <p className="smallFont">Звички</p>
-            <p>{habits ? habits : "-"}</p>
+            <p>{habits || habits === "0" ? habits : "-"}</p>
           </div>
         </div>
       )}
