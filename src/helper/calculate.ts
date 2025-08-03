@@ -17,13 +17,7 @@ export const calculate = (date: string): Imatrix => {
   const secondAddNumber = calcSecondAddNumber(firstAddNumber);
   const thirdAddNumber = calcThirdAddNumber(firstAddNumber, formattedDate);
   const fourthAddNumber = calcfourthAddNumber(thirdAddNumber);
-  const fateNumber = (secondAddNumber: number) => {
-    if (secondAddNumber === 10) {
-      return "1";
-    } else {
-      return secondAddNumber.toString();
-    }
-  };
+  const fateNumber=(secondAddNumber:number) => {if (secondAddNumber===10){return "1"}else{return secondAddNumber.toString();}}
   const arrToSickNumbers = formattedDate
     .concat(
       firstAddNumber.toString(),
@@ -45,13 +39,13 @@ export const calculate = (date: string): Imatrix => {
 
   const hiddenPurpose = calculateHiddenPurpose(character, health, luck, work);
 
-  const matrix: Imatrix = {
+  const matrix = {
     date: date,
     firstAddNumber: firstAddNumber.toString(),
     secondAddNumber: secondAddNumber.toString(),
     thirdAddNumber: thirdAddNumber.toString(),
     fourthAddNumber: fourthAddNumber.toString(),
-    fateNumber: fateNumber(secondAddNumber),
+    fateNumber: fateNumber(secondAddNumber),  
     character: character,
     energy: energy,
     intrest: intrest,
@@ -61,13 +55,12 @@ export const calculate = (date: string): Imatrix => {
     luck: luck,
     debt: debt,
     memory: memory,
-    life: health.concat(logic, luck).split("").length.toString(),
+    life: health.concat(logic, work).split("").length.toString(),
     temper: intrest.concat(logic, luck).split("").length.toString(),
     purpose: character.concat(health, luck).split("").length.toString(),
     hiddenPurpose: hiddenPurpose.hiddenPurpose,
     family: energy.concat(logic, debt).split("").length.toString(),
     habits: intrest.concat(work, memory).split("").length.toString(),
   };
-
   return matrix;
 };
