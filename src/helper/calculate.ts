@@ -17,7 +17,7 @@ export const calculate = (date: string): Imatrix => {
   const secondAddNumber = calcSecondAddNumber(firstAddNumber);
   const thirdAddNumber = calcThirdAddNumber(firstAddNumber, formattedDate);
   const fourthAddNumber = calcfourthAddNumber(thirdAddNumber);
-  const fateNumber=(secondAddNumber:number) => {if (secondAddNumber>10){return secondAddNumber.toString().split("").reduce((acc, curr) => acc + parseInt(curr), 0).toString()}else{return secondAddNumber.toString();}}
+  const fateNumber=(secondAddNumber:number) => {if (secondAddNumber>9){return secondAddNumber.toString().split("").reduce((acc, curr) => acc + parseInt(curr), 0).toString()}else{return secondAddNumber.toString();}}
   const arrToSickNumbers = formattedDate
     .concat(
       firstAddNumber.toString(),
