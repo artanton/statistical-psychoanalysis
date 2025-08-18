@@ -74,7 +74,7 @@ export default function Chart(matrix: ChartProps) {
             <p>{work ? work : "-"}</p>
           </div>
           <div className="chart-item luck">
-            <p className="smallFont">Вдача</p>
+            <p className="smallFont">Удача</p>
             <p>{luck ? luck : "-"}</p>
           </div>
           <div className="chart-item debt">
