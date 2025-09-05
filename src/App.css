@@ -31,10 +31,23 @@ width: 375px;
     font-size: 20px;
   }
 }
-
+@media only screen and (min-width: 769px)  {
+  #root {
+    max-width: 100%;
+width: 475px;
+    font-size: 24px;
+  }
+}
 
 .smallFont {
   font-size: 0.5em;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.8);
+}
+@media only screen and (min-width: 769px)  {
+  .smallFont {
+    font-weight: 400;
+
+    font-size: 0.6em;
+  }
 }
