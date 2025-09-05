@@ -2,7 +2,7 @@ export const calcFirstAddNumber = (formattedDate: string) =>
   formattedDate.split("").reduce((acc, curr) => acc + parseInt(curr), 0);
 
 export const calcSecondAddNumber = (firstAddNumber: number) =>
-  firstAddNumber > 9
+  firstAddNumber > 9&& firstAddNumber !== 11
     ? firstAddNumber
         .toString()
         .split("")
