@@ -3,16 +3,13 @@ import "./Input.css";
 import { Dayjs } from "dayjs";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// import type { InputProps } from "../../interface";
-// import { calculate } from "../../helper/calculate";
+import type { Imatrix, InputProps } from "../../interface";
+import { calculate } from "../../helper/calculate";
 import dayjs from "dayjs";
-interface InputProps {
-  onResult: (value: string) => void;
-}
 
-export default function Input( { onResult }: InputProps) {
+export default function Input({ onResult }: InputProps) {
   const [value, setValue] = React.useState<Dayjs | null>(null);
-  
+  const [matrix, setMatrix] = React.useState<Imatrix | null>(null);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,18 +22,24 @@ export default function Input( { onResult }: InputProps) {
       alert("Невірний формат дати! Використовуйте DD-MM-YYYY.");
       return;
     }
-    // const matrix = calculate(date);
+    const matrix = calculate(date);
+    setMatrix(matrix);
 
-    // if (!matrix) {
-    //   alert("Помилка при розрахунку матриці");
-    //   return;
-    // }
-    onResult(date);
+    if (!matrix) {
+      alert("Помилка при розрахунку матриці");
+      return;
+    }
+    onResult(matrix);
   };
+  const reload = () => {
+    window.location.reload();
+    setMatrix(null);
+  }
+
 
   return (
     <div className="input-container">
-      <form className="form-container" onSubmit={onSubmit}>
+      {!matrix?(<form className="form-container" onSubmit={onSubmit}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
             slotProps={{
@@ -100,7 +103,9 @@ export default function Input( { onResult }: InputProps) {
         <button type="submit" className="submit-button">
           РОЗРАХУВАТИ
         </button>
-      </form>
+      </form>):(<button type="button" className="submit-button" onClick={reload}>
+        НОВИЙ РОЗРАХУНОК
+</button>)}
     </div>
   );
 }
