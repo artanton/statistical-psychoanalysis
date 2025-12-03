@@ -23,6 +23,7 @@ export interface Imatrix {
 }
 export interface InputProps {
   onResult: (matrix: Imatrix) => void;
+  onInput: (date: string) => void;
 }
 
 export interface ChartProps {

@@ -7,6 +7,7 @@ import Chart from "./components/charts/Chart.tsx";
 
 function App() {
   const [matrix, setMatrix] = useState<Imatrix | null>(null);
+  const [data,  setData] = useState<string|null>(null);
   return (
     <Box
       sx={{
@@ -17,7 +18,12 @@ function App() {
       }}
     >
       <h1 className="app-title">РОЗРАХУНОК МАТРИЦІ</h1>
-      <Input onResult={setMatrix} />
+      <Input onResult={setMatrix} onInput={setData}/>
+      {data && <div>
+      
+        <p>Дата народження</p>
+        <p>{data}</p>
+      </div>}
       <Chart matrix={matrix} />
       <p>
         <a

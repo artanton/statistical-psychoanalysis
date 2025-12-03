@@ -7,7 +7,7 @@ import type { Imatrix, InputProps } from "../../interface";
 import { calculate } from "../../helper/calculate";
 import dayjs from "dayjs";
 
-export default function Input({ onResult }: InputProps) {
+export default function Input({ onResult, onInput }: InputProps) {
   const [value, setValue] = React.useState<Dayjs | null>(null);
   const [matrix, setMatrix] = React.useState<Imatrix | null>(null);
 
@@ -18,10 +18,12 @@ export default function Input({ onResult }: InputProps) {
       return;
     }
     const date = value.format("DD-MM-YYYY");
+    
     if (!dayjs(date, "DD-MM-YYYY", true).isValid()) {
       alert("Невірний формат дати! Використовуйте DD-MM-YYYY.");
       return;
     }
+    
     const matrix = calculate(date);
     setMatrix(matrix);
 
@@ -29,6 +31,7 @@ export default function Input({ onResult }: InputProps) {
       alert("Помилка при розрахунку матриці");
       return;
     }
+    onInput(date);
     onResult(matrix);
   };
   const reload = () => {
