@@ -17,9 +17,9 @@ export default function Input({ onResult, onInput }: InputProps) {
       alert("Введіть дату народження!");
       return;
     }
-    const date = value.format("DD-MM-YYYY");
+    const date = value.format("DD.MM.YYYY");
     
-    if (!dayjs(date, "DD-MM-YYYY", true).isValid()) {
+    if (!dayjs(date, "DD.MM.YYYY", true).isValid()) {
       alert("Невірний формат дати! Використовуйте DD-MM-YYYY.");
       return;
     }

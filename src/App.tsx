@@ -19,11 +19,11 @@ function App() {
     >
       <h1 className="app-title">РОЗРАХУНОК МАТРИЦІ</h1>
       <Input onResult={setMatrix} onInput={setData}/>
-      {data && <div>
+      {data && <Box>
       
         <p>Дата народження</p>
         <p>{data}</p>
-      </div>}
+      </Box>}
       <Chart matrix={matrix} />
       <p>
         <a
